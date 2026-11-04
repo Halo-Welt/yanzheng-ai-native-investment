@@ -66,3 +66,9 @@ npm run build
 用户明确授权网站与仓库公开后，2026-11-04在未登录浏览器直接打开 https://yanzheng-investment-research.halowelt.chatgpt.site ，不再显示登录门槛。对线上真实服务完整执行输入→DeepSeek→查看比较证据→人工退回及备注→下载Markdown/JSON→可选本机保存/清除→恢复输入与复核状态→输入修改提示。全部断言通过。
 
 线上模型deepseek-flash，1531ms、630 tokens、1次模型调用、9次工具执行；8条主张为4支持、1冲突、1推断、2禁止。完整真实输出及备注见online-audit.json。线上截图为screenshots/desktop.png。GitHub仓库visibility由CLI核验为PUBLIC。
+
+## 演示视频核验
+
+追加视频为108.88秒、1920×1080、25fps、H.264 MP4，满足60–180秒要求。FFprobe检查媒体参数，FFmpeg完整解码检查文件；逐帧抽查输入、两轮真实AI结果、比较冲突、禁止表达、修订、人审、导出和历史记录。中文字幕位于独立底部区域。
+
+录制中新增两次真实线上审校，第二次4条事实全部支持；实际导出JSON与Markdown已读取核对，最终状态为“人工复核完成（仅资料审校）”、四条reviews均为accepted，证据页码为5。媒体与流程记录见video/video-verification.json及video/completed-report.json。录制没有改动产品代码，原35项自动测试结论保持适用。

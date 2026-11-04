@@ -2,7 +2,7 @@
 
 输入研究摘要 → DeepSeek 拆解原子主张 → 受限证据检索与数值校验 → 标记事实、冲突、推断与违规表达 → 用户查看原文并复核 → 导出带证据与处理记录的报告。
 
-[Web产品](https://yanzheng-investment-research.halowelt.chatgpt.site) · [源代码](https://github.com/Halo-Welt/yanzheng-ai-native-investment) · [交付与访问说明](docs/DELIVERY.md)
+[Web产品](https://yanzheng-investment-research.halowelt.chatgpt.site) · [源代码](https://github.com/Halo-Welt/yanzheng-ai-native-investment) · [五项交付清单](docs/DELIVERY.md) · [1分49秒产品演示](https://github.com/Halo-Welt/yanzheng-ai-native-investment/releases/tag/demo-v1)
 
 面向小型研究团队的初级研究员和复核人员，定位在研究内容进入晨会或内部发布之前。界面采用同花顺风格的红、白、深灰主题，产品为独立笔试作品。
 
@@ -81,7 +81,7 @@ LLM负责自然语言拆解、同义指标识别、事实与推断分类。确�
 | [SOURCES](docs/SOURCES.md) | 原始数据、口径、页码与指定平台接入实测 |
 | [AI_USAGE](docs/AI_USAGE.md) | 多Agent分工、实际AI调用及候选人应复核的修正记录 |
 | [TESTING](docs/TESTING.md) | 主链路、异常、合规与浏览器检查结果 |
-| [DEMO](docs/DEMO.md) | 90秒现场演示脚本（非已录制视频） |
+| [DEMO](docs/DEMO.md) | 108.88秒线上产品实际操作视频、字幕、时间轴与导出记录 |
 | [DELIVERY](docs/DELIVERY.md) | 最终产品与仓库链接、提交清单 |
 
 作者应在提交前亲自复核产品选择、原始年报和AI使用记录，按真实情况补充自己的取舍与修改；不得把AI代理操作伪称为候选人亲自完成的访谈或实验。
