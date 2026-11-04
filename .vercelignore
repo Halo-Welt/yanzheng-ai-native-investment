@@ -1,0 +1,9 @@
+.git
+.env*
+node_modules
+design
+docs
+tests
+output
+artifacts
+README.md

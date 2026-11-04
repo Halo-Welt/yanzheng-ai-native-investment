@@ -1,0 +1,23 @@
+{
+  "name": "yanzheng-research-workbench",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"node server/dev.mjs\" \"vite --host 127.0.0.1\"",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test tests/*.test.mjs",
+    "build:sites": "node scripts/build-sites.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "esbuild": "^0.28.2",
+    "vite": "^6.1.0"
+  }
+}

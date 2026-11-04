@@ -1,0 +1,239 @@
+{
+  "purpose": "单条语义改写技术对照，非总体准确率",
+  "text": "贵州茅台2024年营收1708.99亿元，较上年增加15.71%。",
+  "baseline": {
+    "id": "e9b7f9aa-79eb-474d-8f33-788416137aae",
+    "mode": "demo",
+    "status": "degraded",
+    "createdAt": "2026-11-04T09:10:57.998Z",
+    "model": "本地规则演示（无 LLM 调用）",
+    "claims": [
+      {
+        "id": "claim-1",
+        "text": "贵州茅台2024年营收1708.99亿元，较上年增加15.71%。",
+        "kind": "fact",
+        "company": "贵州茅台",
+        "year": 2024,
+        "metricCode": "unknown",
+        "value": null,
+        "unit": "unknown",
+        "verdict": "unverified",
+        "explanation": "当前证据库没有该公司、期间与字段的匹配原始记录，不能确认该事实。",
+        "evidenceIds": []
+      }
+    ],
+    "evidence": [],
+    "trace": [
+      {
+        "id": "step-1",
+        "tool": "规则演示 · 拆解主张",
+        "status": "warning",
+        "detail": "使用确定性规则提取 1 个主张，没有调用大模型。",
+        "durationMs": 0
+      },
+      {
+        "id": "step-2",
+        "tool": "retrieve_evidence",
+        "status": "warning",
+        "detail": "2024 / 未知字段：返回 0 条公开原始字段。",
+        "durationMs": 0
+      },
+      {
+        "id": "step-3",
+        "tool": "verify_numeric",
+        "status": "warning",
+        "detail": "未知字段：当前证据库没有该公司、期间与字段的匹配原始记录，不能确认该事实。",
+        "durationMs": 0
+      },
+      {
+        "id": "step-4",
+        "tool": "guard_compliance",
+        "status": "success",
+        "detail": "独立规则检查全文；发现 0 处买卖建议或承诺表达。",
+        "durationMs": 0
+      }
+    ],
+    "summary": {
+      "total": 1,
+      "supported": 0,
+      "conflict": 0,
+      "unverified": 1,
+      "inference": 0,
+      "prohibited": 0,
+      "needsReview": 1
+    },
+    "warnings": [
+      "当前为用户显式选择的规则演示，不代表 AI 语义能力或实盘数据。",
+      "存在未能核验的事实，未生成“全部正常”结论。",
+      "证据库为贵州茅台公开历史年报字段快照；不是实时行情，不覆盖其他公司或全部指标。"
+    ],
+    "metrics": {
+      "durationMs": 11,
+      "modelCalls": 0,
+      "toolCalls": 2,
+      "inputChars": 33
+    }
+  },
+  "live": {
+    "id": "02341e70-a884-429e-94e0-f339506824b0",
+    "mode": "live",
+    "status": "completed",
+    "createdAt": "2026-11-04T09:10:59.237Z",
+    "model": "deepseek-flash",
+    "claims": [
+      {
+        "id": "claim-1",
+        "text": "贵州茅台2024年营收1708.99亿元",
+        "kind": "fact",
+        "company": "贵州茅台",
+        "year": 2024,
+        "metricCode": "revenue",
+        "value": 1708.99,
+        "unit": "亿元",
+        "verdict": "supported",
+        "explanation": "与2024年度原始字段「营业收入」一致；170899152276.34元按亿元保留两位小数为1708.99。",
+        "evidenceIds": [
+          "revenue-2024"
+        ],
+        "suggestedText": ""
+      },
+      {
+        "id": "claim-2",
+        "text": "较上年增加15.71%",
+        "kind": "fact",
+        "company": "贵州茅台",
+        "year": 2024,
+        "metricCode": "revenueGrowth",
+        "value": 15.71,
+        "unit": "%",
+        "verdict": "supported",
+        "explanation": "与2024年度原始字段「营业收入同比增长率」一致；15.71%按%保留两位小数为15.71。",
+        "evidenceIds": [
+          "revenue-growth-2024"
+        ],
+        "suggestedText": ""
+      }
+    ],
+    "evidence": [
+      {
+        "id": "revenue-2024",
+        "metricCode": "revenue",
+        "field": "营业收入",
+        "metric": "营业收入",
+        "year": 2024,
+        "value": 1708.9915227634,
+        "unit": "亿元",
+        "rawValue": 170899152276.34,
+        "rawUnit": "元",
+        "company": "贵州茅台",
+        "symbol": "600519.SH",
+        "period": "2024年度",
+        "publishedAt": "2025-04-03",
+        "retrievedAt": "2026-11-04",
+        "isLive": false,
+        "sourceUrl": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF",
+        "sourceName": "巨潮资讯网公开披露文件",
+        "page": 5,
+        "definition": "合并口径营业收入，不含营业总收入中的利息收入等项目。",
+        "excerpt": "2024年 营业收入：170,899,152,276.34元。",
+        "source": {
+          "title": "贵州茅台酒股份有限公司2024年年度报告",
+          "url": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF#page=5",
+          "page": 5,
+          "excerpt": "2024年 营业收入：170,899,152,276.34元。"
+        }
+      },
+      {
+        "id": "revenue-growth-2024",
+        "metricCode": "revenueGrowth",
+        "field": "营业收入同比增长率",
+        "metric": "营业收入同比增长率",
+        "year": 2024,
+        "value": 15.71,
+        "unit": "%",
+        "rawValue": 15.71,
+        "rawUnit": "%",
+        "company": "贵州茅台",
+        "symbol": "600519.SH",
+        "period": "2024年度",
+        "publishedAt": "2025-04-03",
+        "retrievedAt": "2026-11-04",
+        "isLive": false,
+        "sourceUrl": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF",
+        "sourceName": "巨潮资讯网公开披露文件",
+        "page": 5,
+        "definition": "2024年度营业收入相对2023年度营业收入的增长率，直接使用年报披露四舍五入值。",
+        "excerpt": "2024年 营业收入同比增长率：15.71%。",
+        "source": {
+          "title": "贵州茅台酒股份有限公司2024年年度报告",
+          "url": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF#page=5",
+          "page": 5,
+          "excerpt": "2024年 营业收入同比增长率：15.71%。"
+        }
+      }
+    ],
+    "trace": [
+      {
+        "id": "step-1",
+        "tool": "DeepSeek · 拆解主张",
+        "status": "success",
+        "detail": "模型语义提取 2 个主张；结构与原文定位已校验。",
+        "durationMs": 1231
+      },
+      {
+        "id": "step-2",
+        "tool": "retrieve_evidence",
+        "status": "success",
+        "detail": "2024 / 营业收入：返回 1 条公开原始字段。",
+        "durationMs": 0
+      },
+      {
+        "id": "step-3",
+        "tool": "verify_numeric",
+        "status": "success",
+        "detail": "营业收入：与2024年度原始字段「营业收入」一致；170899152276.34元按亿元保留两位小数为1708.99。",
+        "durationMs": 0
+      },
+      {
+        "id": "step-4",
+        "tool": "retrieve_evidence",
+        "status": "success",
+        "detail": "2024 / 营业收入同比：返回 1 条公开原始字段。",
+        "durationMs": 0
+      },
+      {
+        "id": "step-5",
+        "tool": "verify_numeric",
+        "status": "success",
+        "detail": "营业收入同比：与2024年度原始字段「营业收入同比增长率」一致；15.71%按%保留两位小数为15.71。",
+        "durationMs": 0
+      },
+      {
+        "id": "step-6",
+        "tool": "guard_compliance",
+        "status": "success",
+        "detail": "独立规则检查全文；发现 0 处买卖建议或承诺表达。",
+        "durationMs": 0
+      }
+    ],
+    "summary": {
+      "total": 2,
+      "supported": 2,
+      "conflict": 0,
+      "unverified": 0,
+      "inference": 0,
+      "prohibited": 0,
+      "needsReview": 0
+    },
+    "warnings": [
+      "证据库为贵州茅台公开历史年报字段快照；不是实时行情，不覆盖其他公司或全部指标。"
+    ],
+    "metrics": {
+      "durationMs": 1233,
+      "modelCalls": 1,
+      "toolCalls": 4,
+      "inputChars": 33,
+      "totalTokens": 381
+    }
+  }
+}

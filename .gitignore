@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env*
+!.env.example
+.vercel/
+*.log
+.DS_Store
+artifacts/*.zip
+site-dist/
+worker/assets.generated.mjs
+.playwright-cli/
+output/
