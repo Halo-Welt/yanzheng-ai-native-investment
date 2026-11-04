@@ -60,3 +60,9 @@ npm run build
 没有开展真实研究员访谈、随机对照实验、全市场泛化测评、持牌合规认证或收益回测。PRODUCT里的效率降低30%、检出率95%等均为后续目标。完整主张提取召回率、完整监管表达覆盖、供应商费用共享配额、并发负载和多租户隔离仍需单独验证。
 
 第二条真实API对照：同一语义改写输入（营收/较上年增加），规则演示0条支持、1条未核验；DeepSeek拆2条、2条支持，1233ms/381tokens。完整可追溯输出为 `live-semantic-comparison.json`；这是单条技术对照，不作总体指标。
+
+## 公开线上验收
+
+用户明确授权网站与仓库公开后，2026-11-04在未登录浏览器直接打开 https://yanzheng-investment-research.halowelt.chatgpt.site ，不再显示登录门槛。对线上真实服务完整执行输入→DeepSeek→查看比较证据→人工退回及备注→下载Markdown/JSON→可选本机保存/清除→恢复输入与复核状态→输入修改提示。全部断言通过。
+
+线上模型deepseek-flash，1531ms、630 tokens、1次模型调用、9次工具执行；8条主张为4支持、1冲突、1推断、2禁止。完整真实输出及备注见online-audit.json。线上截图为screenshots/desktop.png。GitHub仓库visibility由CLI核验为PUBLIC。

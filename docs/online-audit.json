@@ -1,0 +1,357 @@
+{
+  "id": "2ee4f369-6263-437a-82b1-88704f28ac51",
+  "mode": "live",
+  "status": "blocked",
+  "createdAt": "2026-11-04T09:31:44.238Z",
+  "model": "deepseek-flash",
+  "claims": [
+    {
+      "id": "claim-1",
+      "text": "贵州茅台2024年营业收入1708.99亿元",
+      "kind": "fact",
+      "company": "贵州茅台",
+      "year": 2024,
+      "metricCode": "revenue",
+      "value": 1708.99,
+      "unit": "亿元",
+      "verdict": "supported",
+      "explanation": "与2024年度原始字段「营业收入」一致；170899152276.34元按亿元保留两位小数为1708.99。",
+      "evidenceIds": [
+        "revenue-2024"
+      ],
+      "suggestedText": ""
+    },
+    {
+      "id": "claim-2",
+      "text": "同比增长15.71%",
+      "kind": "fact",
+      "company": "贵州茅台",
+      "year": 2024,
+      "metricCode": "revenueGrowth",
+      "value": 15.71,
+      "unit": "%",
+      "verdict": "supported",
+      "explanation": "与2024年度原始字段「营业收入同比增长率」一致；15.71%按%保留两位小数为15.71。",
+      "evidenceIds": [
+        "revenue-growth-2024"
+      ],
+      "suggestedText": ""
+    },
+    {
+      "id": "claim-3",
+      "text": "归母净利润862.28亿元",
+      "kind": "fact",
+      "company": "贵州茅台",
+      "year": 2024,
+      "metricCode": "profit",
+      "value": 862.28,
+      "unit": "亿元",
+      "verdict": "supported",
+      "explanation": "与2024年度原始字段「归属于上市公司股东的净利润」一致；86228146421.62元按亿元保留两位小数为862.28。",
+      "evidenceIds": [
+        "profit-2024"
+      ],
+      "suggestedText": ""
+    },
+    {
+      "id": "claim-4",
+      "text": "同比增长15.38%",
+      "kind": "fact",
+      "company": "贵州茅台",
+      "year": 2024,
+      "metricCode": "profitGrowth",
+      "value": 15.38,
+      "unit": "%",
+      "verdict": "supported",
+      "explanation": "与2024年度原始字段「归属于上市公司股东的净利润同比增长率」一致；15.38%按%保留两位小数为15.38。",
+      "evidenceIds": [
+        "profit-growth-2024"
+      ],
+      "suggestedText": ""
+    },
+    {
+      "id": "claim-5",
+      "text": "利润增速高于营收增速",
+      "kind": "inference",
+      "company": "贵州茅台",
+      "year": 2024,
+      "metricCode": "unknown",
+      "value": null,
+      "unit": "unknown",
+      "verdict": "conflict",
+      "explanation": "归母净利润同比15.38%，营业收入同比15.71%，差值-0.33个百分点。输入的增速比较方向与原始字段冲突；不能据此推导盈利质量改善。",
+      "evidenceIds": [
+        "profit-growth-2024",
+        "revenue-growth-2024"
+      ],
+      "suggestedText": "归母净利润同比15.38%，低于营业收入同比15.71%；盈利质量变化仍需结合现金流与利润结构核验。"
+    },
+    {
+      "id": "claim-6",
+      "text": "盈利质量确定提升",
+      "kind": "inference",
+      "company": "贵州茅台",
+      "year": 2024,
+      "metricCode": "unknown",
+      "value": null,
+      "unit": "unknown",
+      "verdict": "inference",
+      "explanation": "属于分析判断。历史财务事实不能单独证明因果、盈利质量改善或未来表现，需补充定义、比较口径及反例。",
+      "evidenceIds": [],
+      "suggestedText": "上述判断尚需其他证据支持，请将其明确标为推断，并说明可能的反例与不确定性。"
+    },
+    {
+      "id": "claim-7",
+      "text": "明年必涨20%",
+      "kind": "advice",
+      "company": "贵州茅台",
+      "year": 0,
+      "metricCode": "unknown",
+      "value": 20,
+      "unit": "%",
+      "verdict": "prohibited",
+      "explanation": "包含直接买卖建议、确定涨跌或收益承诺，已阻止其进入可导出研究结论。请改为可验证的研究问题。",
+      "evidenceIds": [],
+      "suggestedText": "删除该交易建议或收益承诺；可改为：后续需跟踪哪些基本面变化及其不确定性？"
+    },
+    {
+      "id": "claim-8",
+      "text": "建议立即买入",
+      "kind": "advice",
+      "company": "贵州茅台",
+      "year": 0,
+      "metricCode": "unknown",
+      "value": null,
+      "unit": "unknown",
+      "verdict": "prohibited",
+      "explanation": "包含直接买卖建议、确定涨跌或收益承诺，已阻止其进入可导出研究结论。请改为可验证的研究问题。",
+      "evidenceIds": [],
+      "suggestedText": "删除该交易建议或收益承诺；可改为：后续需跟踪哪些基本面变化及其不确定性？"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "revenue-2024",
+      "metricCode": "revenue",
+      "field": "营业收入",
+      "metric": "营业收入",
+      "year": 2024,
+      "value": 1708.9915227634,
+      "unit": "亿元",
+      "rawValue": 170899152276.34,
+      "rawUnit": "元",
+      "company": "贵州茅台",
+      "symbol": "600519.SH",
+      "period": "2024年度",
+      "publishedAt": "2025-04-03",
+      "retrievedAt": "2026-11-04",
+      "isLive": false,
+      "sourceUrl": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF",
+      "sourceName": "巨潮资讯网公开披露文件",
+      "page": 5,
+      "definition": "合并口径营业收入，不含营业总收入中的利息收入等项目。",
+      "excerpt": "2024年 营业收入：170,899,152,276.34元。",
+      "source": {
+        "title": "贵州茅台酒股份有限公司2024年年度报告",
+        "url": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF#page=5",
+        "page": 5,
+        "excerpt": "2024年 营业收入：170,899,152,276.34元。"
+      }
+    },
+    {
+      "id": "revenue-growth-2024",
+      "metricCode": "revenueGrowth",
+      "field": "营业收入同比增长率",
+      "metric": "营业收入同比增长率",
+      "year": 2024,
+      "value": 15.71,
+      "unit": "%",
+      "rawValue": 15.71,
+      "rawUnit": "%",
+      "company": "贵州茅台",
+      "symbol": "600519.SH",
+      "period": "2024年度",
+      "publishedAt": "2025-04-03",
+      "retrievedAt": "2026-11-04",
+      "isLive": false,
+      "sourceUrl": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF",
+      "sourceName": "巨潮资讯网公开披露文件",
+      "page": 5,
+      "definition": "2024年度营业收入相对2023年度营业收入的增长率，直接使用年报披露四舍五入值。",
+      "excerpt": "2024年 营业收入同比增长率：15.71%。",
+      "source": {
+        "title": "贵州茅台酒股份有限公司2024年年度报告",
+        "url": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF#page=5",
+        "page": 5,
+        "excerpt": "2024年 营业收入同比增长率：15.71%。"
+      }
+    },
+    {
+      "id": "profit-2024",
+      "metricCode": "profit",
+      "field": "归属于上市公司股东的净利润",
+      "metric": "归属于上市公司股东的净利润",
+      "year": 2024,
+      "value": 862.2814642162,
+      "unit": "亿元",
+      "rawValue": 86228146421.62,
+      "rawUnit": "元",
+      "company": "贵州茅台",
+      "symbol": "600519.SH",
+      "period": "2024年度",
+      "publishedAt": "2025-04-03",
+      "retrievedAt": "2026-11-04",
+      "isLive": false,
+      "sourceUrl": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF",
+      "sourceName": "巨潮资讯网公开披露文件",
+      "page": 5,
+      "definition": "归母净利润，非合并净利润总额、利润总额或扣非归母净利润。",
+      "excerpt": "2024年 归属于上市公司股东的净利润：86,228,146,421.62元。",
+      "source": {
+        "title": "贵州茅台酒股份有限公司2024年年度报告",
+        "url": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF#page=5",
+        "page": 5,
+        "excerpt": "2024年 归属于上市公司股东的净利润：86,228,146,421.62元。"
+      }
+    },
+    {
+      "id": "profit-growth-2024",
+      "metricCode": "profitGrowth",
+      "field": "归属于上市公司股东的净利润同比增长率",
+      "metric": "归属于上市公司股东的净利润同比增长率",
+      "year": 2024,
+      "value": 15.38,
+      "unit": "%",
+      "rawValue": 15.38,
+      "rawUnit": "%",
+      "company": "贵州茅台",
+      "symbol": "600519.SH",
+      "period": "2024年度",
+      "publishedAt": "2025-04-03",
+      "retrievedAt": "2026-11-04",
+      "isLive": false,
+      "sourceUrl": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF",
+      "sourceName": "巨潮资讯网公开披露文件",
+      "page": 5,
+      "definition": "2024年度归母净利润相对2023年度归母净利润的增长率，直接使用年报披露四舍五入值。",
+      "excerpt": "2024年 归属于上市公司股东的净利润同比增长率：15.38%。",
+      "source": {
+        "title": "贵州茅台酒股份有限公司2024年年度报告",
+        "url": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF#page=5",
+        "page": 5,
+        "excerpt": "2024年 归属于上市公司股东的净利润同比增长率：15.38%。"
+      }
+    }
+  ],
+  "trace": [
+    {
+      "id": "step-1",
+      "tool": "DeepSeek · 拆解主张",
+      "status": "success",
+      "detail": "模型语义提取 8 个主张；结构与原文定位已校验。",
+      "durationMs": 1531
+    },
+    {
+      "id": "step-2",
+      "tool": "retrieve_evidence",
+      "status": "success",
+      "detail": "2024 / 营业收入：返回 1 条公开原始字段。",
+      "durationMs": 0
+    },
+    {
+      "id": "step-3",
+      "tool": "verify_numeric",
+      "status": "success",
+      "detail": "营业收入：与2024年度原始字段「营业收入」一致；170899152276.34元按亿元保留两位小数为1708.99。",
+      "durationMs": 0
+    },
+    {
+      "id": "step-4",
+      "tool": "retrieve_evidence",
+      "status": "success",
+      "detail": "2024 / 营业收入同比：返回 1 条公开原始字段。",
+      "durationMs": 0
+    },
+    {
+      "id": "step-5",
+      "tool": "verify_numeric",
+      "status": "success",
+      "detail": "营业收入同比：与2024年度原始字段「营业收入同比增长率」一致；15.71%按%保留两位小数为15.71。",
+      "durationMs": 0
+    },
+    {
+      "id": "step-6",
+      "tool": "retrieve_evidence",
+      "status": "success",
+      "detail": "2024 / 归母净利润：返回 1 条公开原始字段。",
+      "durationMs": 0
+    },
+    {
+      "id": "step-7",
+      "tool": "verify_numeric",
+      "status": "success",
+      "detail": "归母净利润：与2024年度原始字段「归属于上市公司股东的净利润」一致；86228146421.62元按亿元保留两位小数为862.28。",
+      "durationMs": 0
+    },
+    {
+      "id": "step-8",
+      "tool": "retrieve_evidence",
+      "status": "success",
+      "detail": "2024 / 归母净利润同比：返回 1 条公开原始字段。",
+      "durationMs": 0
+    },
+    {
+      "id": "step-9",
+      "tool": "verify_numeric",
+      "status": "success",
+      "detail": "归母净利润同比：与2024年度原始字段「归属于上市公司股东的净利润同比增长率」一致；15.38%按%保留两位小数为15.38。",
+      "durationMs": 0
+    },
+    {
+      "id": "step-10",
+      "tool": "compare_growth",
+      "status": "warning",
+      "detail": "归母净利润同比15.38%，营业收入同比15.71%，差值-0.33个百分点。",
+      "durationMs": 0
+    },
+    {
+      "id": "step-11",
+      "tool": "guard_compliance",
+      "status": "warning",
+      "detail": "独立规则检查全文；发现 1 处买卖建议或承诺表达。",
+      "durationMs": 0
+    }
+  ],
+  "summary": {
+    "total": 8,
+    "supported": 4,
+    "conflict": 1,
+    "unverified": 0,
+    "inference": 1,
+    "prohibited": 2,
+    "needsReview": 4
+  },
+  "warnings": [
+    "证据库为贵州茅台公开历史年报字段快照；不是实时行情，不覆盖其他公司或全部指标。"
+  ],
+  "metrics": {
+    "durationMs": 1531,
+    "modelCalls": 1,
+    "toolCalls": 9,
+    "inputChars": 94,
+    "totalTokens": 630
+  },
+  "inputText": "贵州茅台2024年营业收入1708.99亿元，同比增长15.71%。归母净利润862.28亿元，同比增长15.38%。利润增速高于营收增速。盈利质量确定提升。明年必涨20%，建议立即买入。",
+  "inputMode": "live",
+  "inputScenario": "normal",
+  "inputFingerprint": "eef60c38",
+  "reviewStatus": "审校草稿 · 存在未复核或待修订内容",
+  "reviews": {
+    "claim-5": {
+      "decision": "returned",
+      "note": "已核第5页：利润同比低于营业收入同比，退回修订。"
+    }
+  },
+  "exportedAt": "2026-11-04T09:31:45.163Z",
+  "disclaimer": "历史资料审校，不构成投资建议。合规提示、冲突与不确定信息不得因人工勾选而视为通过。"
+}
